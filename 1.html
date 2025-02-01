@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手机问卷</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            font-size: 1.5em;
+            color: #333;
+        }
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-size: 0.95em;
+            color: #555;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: none;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>问卷调查</h1>
+        <form action="/submit-form" method="POST">
+            <!-- 从问题1到问题100 -->
+            <label for="q1">1. 你喜欢日出还是日落？</label>
+            <input type="text" id="q1" name="q1">
+            <label for="q2">2. 你觉得我怎么样？</label>
+            <input type="text" id="q2" name="q2">
+            <label for="q3">3. 你最讨厌什么颜色？</label>
+            <input type="text" id="q3" name="q3">
+            <label for="q4">4. 最喜欢什么颜色？</label>
+            <input type="text" id="q4" name="q4">
+            <label for="q5">5. 喜欢哪个季节？</label>
+            <input type="text" id="q5" name="q5">
+            <label for="q6">6. 喜欢奶茶还是果茶？</label>
+            <input type="text" id="q6" name="q6">
+            <label for="q7">7. 做过最傻的事情？</label>
+            <input type="text" id="q7" name="q7">
+            <label for="q8">8. 喜欢什么动物？</label>
+            <input type="text" id="q8" name="q8">
+            <label for="q9">9. 害怕失去什么？</label>
+            <input type="text" id="q9" name="q9">
+            <label for="q10">10. 最想得到什么？</label>
+            <input type="text" id="q10" name="q10">
+            <label for="q11">11. 未来想成为什么样的人？</label>
+            <input type="text" id="q11" name="q11">
+            <label for="q12">12. 我身上有哪一点令你喜欢？</label>
+            <input type="text" id="q12" name="q12">
+            <label for="q13">13. 一个人的时候会觉得无聊吗？</label>
+            <input type="text" id="q13" name="q13">
+            <label for="q14">14. 喜欢火锅还是烧烤？</label>
+            <input type="text" id="q14" name="q14">
+            <label for="q15">15. 不喜欢别人称？</label>
+            <input type="text" id="q15" name="q15">
+            <label for="q16">16. 对什么东西过敏？</label>
+            <input type="text" id="q16" name="q16">
+            <label for="q17">17. 最喜欢什么歌？</label>
+            <input type="text" id="q17" name="q17">
+            <label for="q18">18. 有耐心吗？</label>
+            <input type="text" id="q18" name="q18">
+            <label for="q19">19. 会觉得无助吗？</label>
+            <input type="text" id="q19" name="q19">
+            <label for="q20">20. 会觉得我烦吗？</label>
+            <input type="text" id="q20" name="q20">
+            <label for="q21">21. 喜欢男孩还是女孩？</label>
+            <input type="text" id="q21" name="q21">
+            <label for="q22">22. 性取向？</label>
+            <input type="text" id="q22" name="q22">
+            <label for="q23">23. 被爱的前提一定是漂亮吗？</label>
+            <input type="text" id="q23" name="q23">
+            <label for="q24">24. 最擅长什么？</label>
+            <input type="text" id="q24" name="q24">
+            <label for="q25">25. 喜欢冷饮还是热饮？</label>
+            <input type="text" id="q25" name="q25">
+            <label for="q26">26. 最想去哪里玩？</label>
+            <input type="text" id="q26" name="q26">
+            <label for="q27">27. 讨厌什么样的人？</label>
+            <input type="text" id="q27" name="q27">
+            <label for="q28">28. 喜欢甜的还是辣的？</label>
+            <input type="text" id="q28" name="q28">
+            <label for="q29">29. 喜欢什么水果？</label>
+            <input type="text" id="q29" name="q29">
+            <label for="q30">30. 喜欢中式还是西式？</label>
+            <input type="text" id="q30" name="q30">
+            <label for="q31">31. 喜欢自拍吗？</label>
+            <input type="text" id="q31" name="q31">
+            <label for="q32">32. 遇到事情你第一会找谁倾诉？</label>
+            <input type="text" id="q32" name="q32">
+            <label for="q33">33. 喜欢出去还是在家？</label>
+            <input type="text" id="q33" name="q33">
+            <label for="q34">34. 最近过得怎么样？</label>
+            <input type="text" id="q34" name="q34">
+            <label for="q35">35. 憧憬过未来吗？</label>
+            <input type="text" id="q35" name="q35">
+            <label for="q36">36. 期待开学吗？</label>
+            <input type="text" id="q36" name="q36">
+            <label for="q37">37. 有没有过轻生的念头？</label>
+            <input type="text" id="q37" name="q37">
+            <label for="q38">38. 你觉得什么最难吃？</label>
+            <input type="text" id="q38" name="q38">
+            <label for="q39">39. 认识我后悔吗？</label>
+            <input type="text" id="q39" name="q39">
+            <label for="q40">40. 喜欢水煮蛋吗？</label>
+            <input type="text" id="q40" name="q40">
+            <label for="q41">41. 最晚几点睡？</label>
+            <input type="text" id="q41" name="q41">
+            <label for="q42">42. 爱热闹吗？</label>
+            <input type="text" id="q42" name="q42">
+            <label for="q43">43. 会一直开心吗？</label>
+            <input type="text" id="q43" name="q43">
+            <label for="q44">44. 擅长安慰人吗？</label>
+            <input type="text" id="q44" name="q44">
+            <label for="q45">45. 有好玩的会不会和我分享？</label>
+            <input type="text" id="q45" name="q45">
+            <label for="q46">46. 会不会偷偷地哭？</label>
+            <input type="text" id="q46" name="q46">
+            <label for="q47">47. 害怕成为什么样的人？</label>
+            <input type="text" id="q47" name="q47">
+            <label for="q48">48. 我离家出走会收留我吗？</label>
+            <input type="text" id="q48" name="q48">
+            <label for="q49">49. 什么事让你最清醒？</label>
+            <input type="text" id="q49" name="q49">
+            <label for="q50">50. 喜欢什么花？</label>
+            <input type="text" id="q50" name="q50">
+            <label for="q51">51. 三件未来想做的事？</label>
+            <input type="text" id="q51" name="q51">
+            <label for="q52">52. 喜欢雨天还是晴天？</label>
+            <input type="text" id="q52" name="q52">
+            <label for="q53">53. 起床第一件事是做什么？</label>
+            <input type="text" id="q53" name="q53">
+            <label for="q54">54. 友谊和爱情哪个更重要？</label>
+            <input type="text" id="q54" name="q54">
+            <label for="q55">55. 最离不开哪个app？</label>
+            <input type="text" id="q55" name="q55">
+            <label for="q56">56. 有没有努力想实现自己的理想？</label>
+            <input type="text" id="q56" name="q56">
+            <label for="q57">57. 置顶最多几个？</label>
+            <input type="text" id="q57" name="q57">
+            <label for="q58">58. 你会记住我吗？</label>
+            <input type="text" id="q58" name="q58">
+            <label for="q59">59. 看电影有哭过吗？</label>
+            <input type="text" id="q59" name="q59">
+            <label for="q60">60. 口头禅是什么？</label>
+            <input type="text" id="q60" name="q60">
+            <label for="q61">61. 是吃货吗？</label>
+            <input type="text" id="q61" name="q61">
+            <label for="q62">62. 经常自拍吗？</label>
+            <input type="text" id="q62" name="q62">
+            <label for="q63">63. 泪点低吗？</label>
+            <input type="text" id="q63" name="q63">
+            <label for="q64">64. 喜欢什么零食？</label>
+            <input type="text" id="q64" name="q64">
+            <label for="q65">65. 有洁癖吗？</label>
+            <input type="text" id="q65" name="q65">
+            <label for="q66">66. 喜欢用哪个表情包？</label>
+            <input type="text" id="q66" name="q66">
+            <label for="q67">67. 你给我的备注是什么？</label>
+            <input type="text" id="q67" name="q67">
+            <label for="q68">68. 你讨厌我吗？</label>
+            <input type="text" id="q68" name="q68">
+            <label for="q69">69. 相册里最劲爆的图片？</label>
+            <input type="text" id="q69" name="q69">
+            <label for="q70">70. 推荐的app？</label>
+            <input type="text" id="q70" name="q70">
+            <label for="q71">71. 喜欢哪个字？</label>
+            <input type="text" id="q71" name="q71">
+            <label for="q72">72. 喜欢什么饮料？</label>
+            <input type="text" id="q72" name="q72">
+            <label for="q73">73. 喜欢什么口味的冰淇淋？</label>
+            <input type="text" id="q73" name="q73">
+            <label for="q74">74. 做过最后悔的事？</label>
+            <input type="text" id="q74" name="q74">
+            <label for="q75">75. 玩过最久的游戏？</label>
+            <input type="text" id="q75" name="q75">
+            <label for="q76">76. 最好的朋友？</label>
+            <input type="text" id="q76" name="q76">
+            <label for="q77">77. 最美好的回忆？</label>
+            <input type="text" id="q77" name="q77">
+            <label for="q78">78. 最痛苦的回忆？</label>
+            <input type="text" id="q78" name="q78">
+            <label for="q79">79. 身高？</label>
+            <input type="text" id="q79" name="q79">
+            <label for="q80">80. 善于表达吗？</label>
+            <input type="text" id="q80" name="q80">
+            <label for="q81">81. 喜欢什么花的花语？</label>
+            <input type="text" id="q81" name="q81">
+            <label for="q82">82. 最羡慕别人的哪一点？</label>
+            <input type="text" id="q82" name="q82">
+            <label for="q83">83. 理想职业是什么？</label>
+            <input type="text" id="q83" name="q83">
+            <label for="q84">84. 认为“爱”是什么？</label>
+            <input type="text" id="q84" name="q84">
+            <label for="q85">85. 最喜欢的一句话？</label>
+            <input type="text" id="q85" name="q85">
+            <label for="q86">86. 最喜欢的聊天方式？</label>
+            <input type="text" id="q86" name="q86">
+            <label for="q87">87. 收到过最喜欢的礼物？</label>
+            <input type="text" id="q87" name="q87">
+            <label for="q88">88. 你有什么奇怪的癖好？</label>
+            <input type="text" id="q88" name="q88">
+            <label for="q89">89. 最渴望的事物？</label>
+            <input type="text" id="q89" name="q89">
+            <label for="q90">90. 心事多吗？</label>
+            <input type="text" id="q90" name="q90">
+            <label for="q91">91. 一直没理解的事情？</label>
+            <input type="text" id="q91" name="q91">
+            <label for="q92">92. 自由 生命 爱 生活 怎么排序？</label>
+            <input type="text" id="q92" name="q92">
+            <label for="q93">93. 目前有没有喜欢的人？</label>
+            <input type="text" id="q93" name="q93">
+            <label for="q94">94. 最喜欢听的音乐？</label>
+            <input type="text" id="q94" name="q94">
+            <label for="q95">95. 觉得最浪漫的一件事？</label>
+            <input type="text" id="q95" name="q95">
+            <label for="q96">96. 说出自己的一个优点？</label>
+            <input type="text" id="q96" name="q96">
+            <label for="q97">97. 说出自己的一个缺点？</label>
+            <input type="text" id="q97" name="q97">
+            <label for="q98">98. 余业时间会做什么？</label>
+            <input type="text" id="q98" name="q98">
+            <label for="q99">99. 喜欢别人如何称呼自己？</label>
+            <input type="text" id="q99" name="q99">
+            <label for="q100">100. 我们会一直做好朋友吗？</label>
+            <input type="text" id="q100" name="q100">
+            <!-- 提交按钮 -->
+            <button type="submit">提交</button>
+        </form>
+    </div>
+</body>
+</html>
